@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 15, 0.5, 15 )
+
+[sub_resource type="CubeMesh" id=4]
+size = Vector3( 30, 1, 30 )
+
+[node name="Level" type="Spatial"]
+
+[node name="Box" type="RigidBody" parent="."]
+transform = Transform( 0.590535, -0.807012, 0, 0.807012, 0.590535, 0, 0, 0, 1, 0, 2.99879, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Box"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Box"]
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Box2" type="RigidBody" parent="."]
+transform = Transform( 0.590535, -0.807012, 0, 0.807012, 0.590535, 0, 0, 0, 1, 0, 8.7198, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Box2"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Box2"]
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Box3" type="RigidBody" parent="."]
+transform = Transform( 0.590535, -0.807012, 0, 0.807012, 0.590535, 0, 0, 0, 1, 0, 13.9468, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Box3"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Box3"]
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.916551, 0.399917, 0, -0.399917, 0.916551, 0, 10.889, 16.2298 )
+
+[node name="Floor" type="StaticBody" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor"]
+shape = SubResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Floor"]
+mesh = SubResource( 4 )
+material/0 = null
