@@ -11,7 +11,7 @@ dest_files=[ "res://.import/playerball.gltf-9e6487b5339058a0f07b618aa7aae604.scn
 
 [params]
 
-nodes/root_type="Spatial"
+nodes/root_type="KinematicBody"
 nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
